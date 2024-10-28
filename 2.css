@@ -1,0 +1,250 @@
+﻿/* Estilos de encabezado */
+body {
+    font-family: 'Lobster', cursive;   
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /* Espacia el logo y el contenedor derecho */
+  align-items: center; /* Alinea verticalmente el contenido del header */
+  background-color: white;
+  color: #c51712;
+  padding: 20px;
+}
+
+.header-left img {
+  max-width: 120px;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column; /* Hace que el buscador y el menú estén en columna */
+  align-items: flex-end; /* Alinea el contenido a la derecha */
+}
+
+.search-container {
+  margin-bottom: 10px; /* Espacio entre el buscador y el menú */
+  background-color: #FF0000;
+ padding: 2px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+}
+
+.busqueda {
+  width: 70%;
+  padding: 6px;
+  outline: none;
+  font-size: 14px;
+border-radius: 10px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+button img {
+  width: 30px;
+  height: 30px;
+}
+
+#header {
+  text-align: right; /* Alinea el menú a la derecha */
+}
+
+.nav {
+  display: inline-block;
+  padding: 0;
+}
+
+.nav > li {
+  display: inline-block;
+  position: relative;
+}
+
+.nav li a {
+  background-color: #C31004;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+}
+
+.nav li a:hover {
+  background-color: #434343;
+}
+
+.nav li ul {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav li:hover > ul {
+  display: block;
+}
+
+.submenu li {
+  display: block;
+}
+
+.submenu li a {
+  padding: 10px 20px;
+}
+
+/* Área principal */
+.area {
+  background: linear-gradient(to left, #127398, #C30E08);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.textos {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.textos h1 {
+  color: white;
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.textos p {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* Imágenes desplazantes */
+.imagenes-desplazantes {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.imagenes-desplazantes img {
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagenes-desplazantes img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Asegura que el contenido principal esté en columna */
+}
+
+.menu-image-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.menu1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.menu-button {
+  padding: 10px 20px;
+  margin: 10px 0;
+  background-color: #BB0B06;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: url("cursor.jpg") 0 0, pointer;
+  transition: background-color 0.3s;
+}
+
+.menu-button:last-child {
+  margin-right: #1a252f;
+}
+
+/* Estilos CSS para las imágenes */
+.image-container1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  display: none;
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image.active {
+  display: block;
+}
+
+/* Pie de página */
+footer {
+  background-color: #2929F8;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  flex-shrink: 0;
+  font-family:Helvetica;
+}
+.redes-sociales {
+  display: flex;
+  justify-content: flex-start; /* Alinea los íconos de redes sociales a la izquierda */
+  align-items: center;
+margin-top: -40px;
+}
+.redes-sociales img {
+  width: 35px;
+  height: 35px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+
+ 
+  
+}
+
+.redes-sociales img:hover {
+  transform: scale(1.2);
+}
+.contacto {
+  display: flex;
+  align-items: left;
+  order: 1; /* Cambia el orden para que aparezca al principio */
+  justify-content: flex-end;
+}
+
+.contacto p {
+  margin-top: -30px;
+  margin-right: 10px;
+  color: white;
+  text-align: center;
+  font-size: 20px; 
+white-space: nowrap; /* Evita los saltos de línea */
+font-family:'Lobster', cursive;
+}
+
+.contacto-imagen {
+  width: 50px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  height:50px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  margin-left: 5px; /* Espacio entre la frase y la imagen */
+  margin-top: -40px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+}
