@@ -1,0 +1,515 @@
+﻿/* Estilos de encabezado */
+body {
+    font-family: 'Lobster', cursive;   
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /* Espacia el logo y el contenedor derecho */
+  align-items: center; /* Alinea verticalmente el contenido del header */
+  background-image: url('inicio2.jpg'); /* Reemplaza 'tu-imagen-de-fondo.jpg' con la ruta de tu imagen */
+  background-size: cover; /* Asegura que la imagen cubra todo el encabezado */
+  background-position: center; /* Centra la imagen en el encabezado */
+  color: #c51712;
+  padding: 20px;
+}
+
+.header-left img {
+  max-width: 120px;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column; /* Hace que el buscador y el menú estén en columna */
+  align-items: flex-end; /* Alinea el contenido a la derecha */
+}
+
+.search-container {
+  margin-bottom: 10px; /* Espacio entre el buscador y el menú */
+  background-color: rgba(255, 0, 0, 0.8); /* Fondo rojo con opacidad */
+  padding: 2px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+}
+
+.busqueda {
+  width: 70%;
+  padding: 6px;
+  outline: none;
+  font-size: 14px;
+  border-radius: 10px;
+  background-color: white; /* Fondo transparente para el input */
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+button img {
+  width: 30px;
+  height: 30px;
+}
+
+#header {
+  text-align: right; /* Alinea el menú a la derecha */
+}
+
+.nav {
+  display: inline-block;
+  padding: 0;
+}
+
+.nav > li {
+  display: inline-block;
+  position: relative;
+}
+
+.nav li a {
+  background-color: rgba(195, 16, 4, 0.8); /* Fondo rojo con opacidad */
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  border-radius: 4px; /* Añade bordes redondeados para una apariencia más suave */
+}
+
+.nav li a:hover {
+  background-color: rgba(67, 67, 67, 0.8); /* Fondo gris oscuro con opacidad en hover */
+}
+
+.nav li ul {
+  display: none;
+  position: absolute;
+  min-width: 150px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+ 
+}
+
+.nav li:hover > ul {
+  display: block;
+}
+
+.submenu li {
+  display: block;
+}
+
+.submenu li a {
+  padding: 10px 10px;
+  text-align: left;
+
+}
+
+/* Área principal */
+.area {
+  background: linear-gradient(to left, #127398, #C30E08);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.textos {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.textos h1 {
+  color: white;
+  font-size: 3em;
+  margin-bottom: 10px;
+ font-family: Arial;  
+}
+
+.textos p {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-family: Arial;  
+}
+.language-switcher {
+    text-align: right; /* Ubicar el botón a la derecha */
+    margin: 15 px;
+}
+
+.language-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+     margin-right: 30px;
+    top: 30px;
+}
+
+.language-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos generales para la galería */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* Estilos para cada ítem de la galería */
+.gallery-item {
+  flex: 1 1 calc(33.333% - 10px); /* Tres columnas en pantallas grandes */
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto al pasar el ratón sobre el ítem */
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para las imágenes dentro de los ítems */
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Estilos para la descripción dentro de los ítems */
+.gallery-item p {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: white;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+/* Diseño responsivo para pantallas medianas */
+@media (max-width: 768px) {
+  .gallery-item {
+    flex: 1 1 calc(50% - 10px); /* Dos columnas en pantallas medianas */
+  }
+}
+
+/* Diseño responsivo para pantallas pequeñas */
+@media (max-width: 480px) {
+  .gallery-item {
+    flex: 1 1 100%; /* Una columna en pantallas pequeñas */
+  }
+}
+
+.banner-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-slide {
+    display: flex;
+    animation: slide 15s infinite;
+   
+}
+
+.banner-slide .slide {
+    flex: 0 0 100%;
+    
+}
+
+.banner-slide .slide img {
+    width: 70%;
+    height: auto;
+   
+}
+
+/* Estilo para los botones de control */
+.slide-controls {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.slide-controls label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #777;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* Estilo para los botones de control seleccionados */
+input[type="radio"]:checked + .slide-controls label {
+    background-color: #f44336;
+}
+
+/* Estilo para ocultar los botones de radio */
+input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+}
+
+/* Animación del banner */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+  
+  
+}
+
+.services-container {
+  text-align: center;
+  padding: 40px;
+  background-color: transparent; /* Fondo totalmente transparente */
+  margin: 20px;
+ color: white;
+}
+
+.services-container h2 {
+  color: #00bfbf;
+  font-size: 28px;
+  margin-bottom: 30px;
+ color: white;
+}
+
+.service-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-item {
+  background-color: transparent; /* Fondo transparente */
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+ color: white;
+}
+
+.service-item:hover {
+  transform: scale(1.05); /* Efecto de agrandado en hover */
+}
+
+.service-img {
+  width: 80px; /* Ajusta el tamaño de las imágenes */
+  margin-bottom: 15px;
+}
+
+.service-item h3 {
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 15px;
+ color: white;
+  text-align: center;
+}
+
+.service-item p {
+  color: #555;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: white;
+   text-align: center;
+  
+}
+
+.cta-button {
+  background-color: #1250de;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: #008f8f;
+}
+
+/* Imágenes desplazantes */
+.imagenes-desplazantes {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.imagenes-desplazantes img {
+  width: 1000px;
+  height: 800px;
+  border-radius: 20px;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagenes-desplazantes img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Asegura que el contenido principal esté en columna */
+}
+
+.menu-image-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.menu1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.menu-button {
+    width: 150px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    cursor: pointer;
+    border: none;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.menu-button:hover {
+    transform: scale(1.1); /* Aumenta el tamaño ligeramente al pasar el ratón */
+}
+
+/* Estilos CSS para las imágenes */
+.image-container1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  display: none;
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image.active {
+  display: block;
+}
+.card {
+    perspective: 1000px;/* Evita que al girar la imagen no sobresalga */
+}
+
+.card-inner {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /*determina si la cara posterior de un elemento es visible de frente al usuario.*/
+    border-radius: 8px;
+    overflow: hidden; /* Evita que las imágenes sobresalgan del contenedor */
+}
+
+.card-front {
+  background: #333;
+    color: #ffffff;  
+   
+}
+
+.card-back {
+    background: #333;
+    color: #ffffff;
+    
+    transform: rotateY(180deg);
+}
+
+.card-front img, .card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+}
+
+/* Pie de página */
+footer {
+  background-color: #2929F8;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  flex-shrink: 0;
+  font-family: Helvetica;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: flex-start; /* Alinea los íconos de redes sociales a la izquierda */
+  align-items: center;
+  margin-top: -40px;
+}
+
+.redes-sociales img {
+  width: 35px;
+  height: 35px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.redes-sociales img:hover {
+  transform: scale(1.2);
+}
+
+.contacto {
+  display: flex;
+  align-items: left;
+  order: 1; /* Cambia el orden para que aparezca al principio */
+  justify-content: flex-end;
+}
+
+.contacto p {
+  margin-top: -30px;
+  margin-right: 10px;
+  color: white;
+  text-align: center;
+  font-size: 20px; 
+  white-space: nowrap; /* Evita los saltos de línea */
+  font-family: 'Lobster', cursive;
+}
+
+.contacto-imagen {
+  width: 50px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  height: 50px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  margin-left: 5px; /* Espacio entre la frase y la imagen */
+  margin-top: -40px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
