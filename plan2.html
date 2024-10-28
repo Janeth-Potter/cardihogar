@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CARDIHOGAR</title>
+  <link rel="stylesheet" href="podria.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-left">
+        <img src="somos1.png" alt="Mi Logo">
+       <div class="language-switcher">
+        <a href="eplan.html" class="language-button">English</a>
+    </div>
+
+      </div>
+      <div class="header-right">
+        <div class="search-container">
+          <input type="text" placeholder="Buscar..." class="busqueda">
+          <button type="submit"><img src="buscar.png" alt="Buscar"></button>
+        </div>
+        <div id="header">
+          <ul class="nav">
+            <li><a href="index.html">Inicio</a></li>
+            <li class="dropdown">
+              <a href="">¿Quienes Somos?</a>
+              <ul class="submenu">
+                <li><a href="plan2.html">Plan estrategico</a></li>
+                <li><a href="proyecto2.html">Proyecto</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="solucion2.html">Solucion Tecnologica</a>
+              <ul class="submenu">
+                <li><a href="solucion2.html">CARDIHOGAR</a></li>
+                <li><a href="https://es.educaplay.com/recursos-educativos/20206043-desafio_cardiovascular.html">Cardio Play</a></li>
+                
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="evidencias2.html">Evidencias</a>
+              <ul class="submenu">
+                <li><a href="evidencias2.html">Fotos</a></li>
+                <li><a href="5consejosparaelcuidadodelCorazón.mp4">Video</a></li>
+                <li><a href="INFOGRAFIAPRINCIPAL.pdf">Infografia</a></li>
+                <li><a href="https://forms.gle/JyUpo3D3XyTbEmxE7">Forms</a></li>
+                <li><a href="REVISTADIGITAL.pdf">R.V</a></li>
+                
+          </ul>
+        </li>
+        </div>
+      </div>
+    </header>
+    
+    <main class="area">
+      <div class="containerw">
+        <div class="menu-image-container">
+          <div class="menu1">
+            <img src="bvision.png" alt="visión"  class="menu-button" onclick="showImage('image5')"></button>
+            <img src="bmision.png" alt="visión"  class="menu-button" onclick="showImage('image6')"></button>
+            <img src="bvalores.png" alt="visión"  class="menu-button" onclick="showImage('image7')"></button>
+          </div>
+          <div class="image-container1">
+            <img id="image5" class="image" src="vision1.png">
+            <img id="image6" class="image" src="mision1.png">
+            <img id="image7" class="image" src="Valores1.png">
+          </div>
+        </div>
+      </div>
+      <script>
+        function showImage(imageId) {
+          const images = document.querySelectorAll('.image');
+          images.forEach(image => image.classList.remove('active'));
+          const selectedImage = document.getElementById(imageId);
+          selectedImage.classList.add('active');
+        }
+      </script>
+    </main>
+    <footer>
+      <p>CARDIHOGAR © 2024</p>
+      <div class="redes-sociales">
+        <a href="https://www.facebook.com/people/CardiHogar/61565942976273/"><img src="facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="twitter.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com/cardihogar/"><img src="instagram.png" alt="Instagram"></a>
+      </div>
+      <div class="contacto">
+        <p>"Sembrando amor en cada latido ♡"</p>
+        <img class="contacto-imagen" src="reeve.png" alt="Imagen de contacto">
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
